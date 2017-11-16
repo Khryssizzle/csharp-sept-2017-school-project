@@ -25,7 +25,8 @@ namespace WhereIsMyStuff.Migrations
                     ItemType = "Book",
                     ItemCondition = "New",
                     Notes = "Collector's edition",
-                    ItemBorrower = borrower1
+                    FirstName = "Brandon",
+                    LastName = "Sanderson"
                 },
 
                  new Entry()
@@ -36,7 +37,8 @@ namespace WhereIsMyStuff.Migrations
                      ItemType = "Book",
                      ItemCondition = "New",
                      Notes = "Collector's edition",
-                     ItemBorrower = borrower1
+                     FirstName = "Brandon",
+                     LastName = "Sanderson"
                  },
 
                   new Entry()
@@ -47,7 +49,8 @@ namespace WhereIsMyStuff.Migrations
                       ItemType = "Clothing",
                       ItemCondition = "Normal wear and tear",
                       Notes = "",
-                      ItemBorrower = borrower2
+                      FirstName = "Betty",
+                      LastName = "Fuego"
                   },
 
                    new Entry()
@@ -58,7 +61,8 @@ namespace WhereIsMyStuff.Migrations
                        ItemType = "Video game",
                        ItemCondition = "New",
                        Notes = "Switch game",
-                       ItemBorrower = borrower5
+                       FirstName = "Terry",
+                       LastName = "Pratchett"
                    },
 
                     new Entry()
@@ -69,7 +73,8 @@ namespace WhereIsMyStuff.Migrations
                         ItemType = "Book",
                         ItemCondition = "New",
                         Notes = "Collector's edition",
-                        ItemBorrower = borrower5
+                        FirstName = "Terry",
+                        LastName = "Pratchett"
                     },
 
                      new Entry()
@@ -80,7 +85,8 @@ namespace WhereIsMyStuff.Migrations
                          ItemType = "Other",
                          ItemCondition = "Used",
                          Notes = "Will return after Halloween, missing blue paint",
-                         ItemBorrower = borrower3
+                         FirstName = "Neil",
+                         LastName = "Gaiman"
                      },
 
                       new Entry()
@@ -91,7 +97,8 @@ namespace WhereIsMyStuff.Migrations
                           ItemType = "Other",
                           ItemCondition = "Normal wear and tear",
                           Notes = "Will return after Halloween",
-                          ItemBorrower = borrower3
+                          FirstName = "Neil",
+                          LastName = "Gaiman"
                       },
 
                        new Entry()
@@ -102,7 +109,8 @@ namespace WhereIsMyStuff.Migrations
                            ItemType = "Clothing",
                            ItemCondition = "Damaged",
                            Notes = "Hole in left foot",
-                           ItemBorrower = borrower3
+                           FirstName = "Neil",
+                           LastName = "Gaiman"
                        },
 
                         new Entry()
@@ -113,7 +121,8 @@ namespace WhereIsMyStuff.Migrations
                             ItemType = "Tools",
                             ItemCondition = "Normal wear and tear",
                             Notes = "Collector's edition",
-                            ItemBorrower = borrower4
+                            FirstName = "Isaac",
+                            LastName = "Asimov"
                         }
             );
 
