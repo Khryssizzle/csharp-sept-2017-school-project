@@ -1,69 +1,52 @@
-﻿@model IEnumerable<WhereIsMyStuff.Models.Entry>
+﻿
 
-@{
-    ViewBag.Title = "Index";
-}
+@model IEnumerable<WhereIsMyStuff.Models.Entry>
 
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.DateBorrowed)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Item)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ItemType)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ItemCondition)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Notes)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LastName)
-        </th>
-        <th></th>
-    </tr>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-3">Where is my Stuff???</h1>
+        <button type="button" class="btn btn-warning" onclick="location.href='@Url.Action("Create", "Entry")'">Add Entry</button>
+    </div>
+</div>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateBorrowed)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Item)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ItemType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ItemCondition)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Notes)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Entry_Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Entry_Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Entry_Id })
-        </td>
-    </tr>
-}
 
-</table>
+
+
+<div class="container-fluid">
+    <ul>
+        <li>
+            @foreach (var item in Model)
+            {
+                <div class="card">
+                    <div class="card-header">
+                        @Html.DisplayFor(modelItem => item.DateBorrowed)
+                    </div>
+                    <div class="card-block">
+                        <h4 class="card-title">@Html.DisplayFor(modelItem => item.Item)</h4>
+                        <p class="card-text">Type: @Html.DisplayFor(modelItem => item.ItemType)</p>
+                        <p class="card-text">Condition: @Html.DisplayFor(modelItem => item.ItemCondition)</p>
+                        <p class="card-text">Notes: @Html.DisplayFor(modelItem => item.Notes)</p>
+                        <p class="card-text">Borrower: @Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.LastName)</p>
+                    </div>
+                    <div>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Entry_Id }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.Entry_Id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Entry_Id })
+                    </div>
+                    <div class="card-footer text-muted">
+                        how long since borrowed
+                    </div>
+
+                </div>
+                <br>
+                <br>
+            }
+        </li>
+    </ul>
+</div>
+
+<button type="button" class="btn btn-warning" onclick="location.href='@Url.Action("Create", "Entry")'">Add Entry</button>
+
+
+
