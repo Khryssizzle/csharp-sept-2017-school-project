@@ -48,7 +48,7 @@ namespace WhereIsMyStuff.Migrations
                       Item = "TARDIS Hoodie",
                       ItemType = "Clothing",
                       ItemCondition = "Normal wear and tear",
-                      Notes = "",
+                      Notes = "Left sleeve is frayed",
                       FirstName = "Betty",
                       LastName = "Fuego"
                   },
@@ -57,7 +57,7 @@ namespace WhereIsMyStuff.Migrations
                    {
                        Entry_Id = 4,
                        DateBorrowed = new DateTime(2017, 8, 29),
-                       Item = "Breat of the Wild",
+                       Item = "Breath of the Wild",
                        ItemType = "Video game",
                        ItemCondition = "New",
                        Notes = "Switch game",
