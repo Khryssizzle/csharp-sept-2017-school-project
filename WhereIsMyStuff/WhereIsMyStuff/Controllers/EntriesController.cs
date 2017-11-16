@@ -18,7 +18,9 @@ namespace WhereIsMyStuff.Controllers
         // GET: Entries
         public ActionResult Index()
         {
-            return View(db.Entries.ToList());
+            return View(db.Entries.OrderBy(x => x.DateBorrowed)
+                  .ThenBy(x => x.Item)
+                  .ToList());
         }
 
         // GET: Entries/Details/5

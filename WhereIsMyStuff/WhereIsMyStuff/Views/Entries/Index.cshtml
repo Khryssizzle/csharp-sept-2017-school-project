@@ -1,18 +1,12 @@
-﻿
-
-@model IEnumerable<WhereIsMyStuff.Models.Entry>
+﻿@model IEnumerable<WhereIsMyStuff.Models.Entry>
 
 
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h1 class="display-3">Where is My Stuff???</h1>
+        <h1 class="display-3">Where is my Stuff???</h1>
         <button type="button" class="btn btn-warning" onclick="location.href='@Url.Action("Create", "Entries")'">Add Entry</button>
     </div>
 </div>
-
-
-
-
 <div class="container-fluid">
     <ul>
         <li>
@@ -20,22 +14,19 @@
             {
                 <div class="card">
                     <div class="card-header">
-                        @Html.DisplayFor(modelItem => item.DateBorrowed)
+                        @Html.DisplayFor(modelItem => item.Item)
                     </div>
                     <div class="card-block">
-                        <h4 class="card-title">@Html.DisplayFor(modelItem => item.Item)</h4>
-                        <p class="card-text">Type: @Html.DisplayFor(modelItem => item.ItemType)</p>
-                        <p class="card-text">Condition: @Html.DisplayFor(modelItem => item.ItemCondition)</p>
-                        <p class="card-text">Notes: @Html.DisplayFor(modelItem => item.Notes)</p>
-                        <p class="card-text">Borrower: @Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.LastName)</p>
-                    </div>
-                    <div>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.Entry_Id }) |
-                        @Html.ActionLink("Details", "Details", new { id = item.Entry_Id }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.Entry_Id })
+                        <h4 class="card-title">@Html.DisplayFor(modelItem => item.DateBorrowed.Month)/@Html.DisplayFor(modelItem => item.DateBorrowed.Day)/@Html.DisplayFor(modelItem => item.DateBorrowed.Year)</h4>
+                        <p class="card-text">Type:  @Html.DisplayFor(modelItem => item.ItemType)</p>
+                        <p class="card-text">Condition:  @Html.DisplayFor(modelItem => item.ItemCondition)</p>
+                        <p class="card-text">Notes:  @Html.DisplayFor(modelItem => item.Notes)</p>
+                        <p class="card-text">Borrower:  @Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.LastName)</p>
                     </div>
                     <div class="card-footer text-muted">
-                        how long since borrowed
+                        Borrowerd @DateTime.Now.Subtract(item.DateBorrowed).Days days ago
+                        <button type="button" class="btn btn-warning" onclick="location.href='@Url.Action("Edit", "Entries", new { id = item.Entry_Id })'">Edit</button>
+                        <button type="button" class="btn btn-warning" onclick="location.href='@Url.Action("Delete", "Entries", new { id = item.Entry_Id })'">Delete</button>
                     </div>
 
                 </div>

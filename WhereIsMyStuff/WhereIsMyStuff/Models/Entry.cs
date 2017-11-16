@@ -12,7 +12,7 @@ namespace WhereIsMyStuff.Models
         [Key]
         public int Entry_Id { get; set; }
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:MM-dd-yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [Display(Name = "Date Borrowed")]
         public DateTime DateBorrowed { get; set; } = DateTime.Now;
         [Required]
