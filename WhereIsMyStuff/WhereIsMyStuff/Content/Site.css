@@ -32,9 +32,9 @@ ul {
   -webkit-column-gap: 50px;
   column-count: 3;
   column-gap: 50px;
-  -webkit-column-width: 300px;
-     -moz-column-width: 300px;
-          column-width: 300px;
+  -webkit-column-width: 250px;
+     -moz-column-width: 250px;
+          column-width: 250px;
 }
 
 
@@ -71,7 +71,10 @@ li {
     text-align: center;
 }
 
-
+.btn{
+ background-color:#6BA3A4;
+ color: white;
+}
 
 
 
