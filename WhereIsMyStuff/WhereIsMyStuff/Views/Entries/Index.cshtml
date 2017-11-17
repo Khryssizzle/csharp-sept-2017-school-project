@@ -25,7 +25,7 @@
                         <p class="card-text">Borrower:  @Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.LastName)</p>
                     </div>
                     <div class="card-footer text-muted">
-                       Borrowerd @DateTime.Now.Subtract(item.DateBorrowed).Days days ago | @Html.ActionLink("Edit", "Edit") | @Html.ActionLink("Delete", "Delete")
+                       Borrowerd @DateTime.Now.Subtract(item.DateBorrowed).Days days ago | @Html.ActionLink("Edit", "Edit", new { @id = item.Entry_Id }) | @Html.ActionLink("Delete", "Delete", new { @id = item.Entry_Id })
                     </div>
                 </div>
                 <br>
