@@ -40,6 +40,7 @@ ul {
           column-width: 300px;
 }
 
+
 li {
     list-style: none;
 }
@@ -64,17 +65,18 @@ li {
 }
 
 .card-block {
-    padding-left: 10px;
+    padding-left: 20px;
 }
 
 .card-footer {
-    padding-left: 10px;
-
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
 }
 
-.btn {
-    padding: 10px 20px;
-}
+
+
+
 
 
 

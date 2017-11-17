@@ -4,7 +4,8 @@
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
         <h1 class="display-3">Where is my Stuff???</h1>
-        <button type="button" class="btn btn-warning" onclick="location.href='@Url.Action("Create", "Entries")'">Add Entry</button>
+        <br />
+        <button type="button" class="btn btn-warning btn-lg" onclick="location.href='@Url.Action("Create", "Entries")'">Add Entry</button>
     </div>
 </div>
 <div class="container-fluid">
@@ -24,15 +25,12 @@
                         <p class="card-text">Borrower:  @Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.LastName)</p>
                     </div>
                     <div class="card-footer text-muted">
-                        Borrowerd @DateTime.Now.Subtract(item.DateBorrowed).Days days ago
-                        <button type="button" class="btn btn-warning" onclick="location.href='@Url.Action("Edit", "Entries", new { id = item.Entry_Id })'">Edit</button>
-                        <button type="button" class="btn btn-warning" onclick="location.href='@Url.Action("Delete", "Entries", new { id = item.Entry_Id })'">Delete</button>
+                       Borrowerd @DateTime.Now.Subtract(item.DateBorrowed).Days days ago | @Html.ActionLink("Edit", "Edit") | @Html.ActionLink("Delete", "Delete")
                     </div>
-
                 </div>
                 <br>
                 <br>
-            }
+            }                
         </li>
     </ul>
 </div>
