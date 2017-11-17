@@ -49,8 +49,8 @@ namespace WhereIsMyStuff.Migrations
                       ItemType = "Clothing",
                       ItemCondition = "Normal wear and tear",
                       Notes = "Left sleeve is frayed",
-                      FirstName = "Betty",
-                      LastName = "Fuego"
+                      FirstName = "Isaac",
+                      LastName = "Asimov"
                   },
 
                    new Entry()
@@ -111,19 +111,8 @@ namespace WhereIsMyStuff.Migrations
                            Notes = "Hole in left foot",
                            FirstName = "Neil",
                            LastName = "Gaiman"
-                       },
+                       }
 
-                        new Entry()
-                        {
-                            Entry_Id = 9,
-                            DateBorrowed = new DateTime(2017, 3, 14),
-                            Item = "Jumper Cables",
-                            ItemType = "Tools",
-                            ItemCondition = "Normal wear and tear",
-                            Notes = "Collector's edition",
-                            FirstName = "Isaac",
-                            LastName = "Asimov"
-                        }
             );
 
 

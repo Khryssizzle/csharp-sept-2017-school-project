@@ -23,7 +23,7 @@ namespace WhereIsMyStuff.Controllers
                   .ToList());
         }
 
-        // GET: Entries/Details/5
+        // GET: Entries/Details/id
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -45,8 +45,6 @@ namespace WhereIsMyStuff.Controllers
         }
 
         // POST: Entries/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Entry_Id,DateBorrowed,Item,ItemType,ItemCondition,Notes,FirstName,LastName")] Entry entry)
@@ -61,7 +59,7 @@ namespace WhereIsMyStuff.Controllers
             return View(entry);
         }
 
-        // GET: Entries/Edit/5
+        // GET: Entries/Edit/id
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -76,7 +74,7 @@ namespace WhereIsMyStuff.Controllers
             return View(entry);
         }
 
-        // POST: Entries/Edit/5
+        // POST: Entries/Edit/id
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -92,7 +90,7 @@ namespace WhereIsMyStuff.Controllers
             return View(entry);
         }
 
-        // GET: Entries/Delete/5
+        // GET: Entries/Delete/id
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -107,7 +105,7 @@ namespace WhereIsMyStuff.Controllers
             return View(entry);
         }
 
-        // POST: Entries/Delete/5
+        // POST: Entries/Delete/id
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
