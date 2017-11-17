@@ -1,13 +1,12 @@
 ﻿@model IEnumerable<WhereIsMyStuff.Models.Entry>
 
 
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="display-3">Where is my Stuff???</h1>
-        <br />
-        <button type="button" class="btn btn-warning btn-lg" onclick="location.href='@Url.Action("Create", "Entries")'">Add Entry</button>
+
+    <div class="container app-name">
+        <h1>Where is my Stuff???</h1>
+        <button type="button" class="btn btn-default btn-lg" onclick="location.href='@Url.Action("Create", "Entries")'">Add Entry</button>
     </div>
-</div>
+
 <div class="container-fluid">
     <ul>
         <li>
@@ -24,7 +23,7 @@
                         <p class="card-text">Notes:  @Html.DisplayFor(modelItem => item.Notes)</p>
                         <p class="card-text">Borrower:  @Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.LastName)</p>
                     </div>
-                    <div class="card-footer text-muted">
+                    <div class="card-footer">
                        Borrowerd @DateTime.Now.Subtract(item.DateBorrowed).Days days ago | @Html.ActionLink("Edit", "Edit", new { @id = item.Entry_Id }) | @Html.ActionLink("Delete", "Delete", new { @id = item.Entry_Id })
                     </div>
                 </div>
@@ -35,7 +34,6 @@
     </ul>
 </div>
 
-<button type="button" class="btn btn-warning" onclick="location.href='@Url.Action("Create", "Entries")'">Add Entry</button>
 
 
 

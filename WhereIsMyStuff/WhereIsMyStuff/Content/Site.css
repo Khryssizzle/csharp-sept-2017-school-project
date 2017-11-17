@@ -1,8 +1,7 @@
 ﻿body {
-    padding-bottom: 20px;
-    background-color: #5b5a5a;
-    color : white;
-    
+    height: 100%;
+ 	background-image: url(../Content/img/background.jpg);
+    color: white;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -22,11 +21,9 @@ textarea {
 
 /*Style for Entry Index*/
 
-.jumbotron {
-    background-color: #76ded0;
-    text-align: center;
-   
-}
+ .app-name {
+     text-align: center;
+ } 
 
 ul {
   -moz-column-count: 3;
@@ -61,7 +58,7 @@ li {
 .card-header {
     text-align: center;
     font-size: x-large;
-    background-color: #76ded0;
+    background-color:#6BA3A4;
 }
 
 .card-block {
@@ -77,10 +74,5 @@ li {
 
 
 
-
-
-
-
-  
 
 
